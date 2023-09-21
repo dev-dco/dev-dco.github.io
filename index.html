@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", sans-serif;
+        }
+        
+        header {
+            background: #111;
+            height: 5vh;
+            width: 100vw;
+            display: flex;
+            flex-direction: row;
+        }
+
+        header > div {
+            width: calc(100vw / 4);
+            display: flex;
+            flex-direction: row;
+            place-items: center;
+            justify-content: center;
+        }
+
+        header > div a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        section {
+            height: 95vh;
+            width: 100vw;
+            flex-direction: column;
+            place-items: center;
+            justify-content: center;
+        }
+
+        .inactive {
+            display: none;
+        }
+
+        .active {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://avatars.githubusercontent.com/u/145495454?s=280&v=4"></img>
+        <div><a href="#home" onclick="sethome()">Home</a></div>
+        <div><a href="#about" onclick="setabout()">About</a></div>
+        <div><a href="#members" onclick="setmembers()">Members</a></div>
+        <div><a href="#contact" onclick="setcontact()">Contact</a></div>
+    </header>
+
+    <section id="home" class="active">
+        <h1>This is the home page</h1>
+    </section>
+
+    <section id="about" class="inactive">
+        <h1>This is the about page</h1>
+    </section>
+
+    <section id="members" class="inactive">
+        <h1>This is the members page</h1>
+    </section>
+
+    <section id="contact" class="inactive">
+        <h1>This is the contact page</h1>
+    </section>
+
+    <script>
+        const sethome = () => {
+            document.querySelector(".active").className = "inactive"
+            document.querySelector("#home").className = "active"
+        }
+
+        const setabout = () => {
+            document.querySelector(".active").className = "inactive"
+            document.querySelector("#about").className = "active"
+        }
+
+        const setmembers = () => {
+            document.querySelector(".active").className = "inactive"
+            document.querySelector("#members").className = "active"
+        }
+
+        const setcontact = () => {
+            document.querySelector(".active").className = "inactive"
+            document.querySelector("#contact").className = "active"
+        }
+    </script>
+</body>
+</html>
