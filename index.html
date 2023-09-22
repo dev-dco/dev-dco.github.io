@@ -4,74 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>/dev/ co-op</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: "Segoe UI", "SF Pro", sans-serif;
-            background: #222;
-        }
-        
-        header {
-            background: #111;
-            height: 5vh;
-            width: 100vw;
-            display: flex;
-            flex-direction: row;
-        }
-
-        header > div {
-            width: calc(100vw / 4);
-            display: flex;
-            flex-direction: row;
-            place-items: center;
-            justify-content: center;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        section {
-            height: 95vh;
-            width: 100vw;
-            flex-direction: column;
-            place-items: center;
-            justify-content: center;
-        }
-
-        .inactive {
-            display: none;
-        }
-
-        .active {
-            display: flex;
-        }
-
-        .members {
-            width: 500px;
-            height: 300px;
-            display: flex;
-            flex-direction: row;
-        }
-
-        .member {
-            width: 250px;
-            height: 300px;
-            display: flex;
-            flex-direction: column;
-            place-items: center;
-            justify-content: center;
-        }
-
-        .member img {
-            width: 128px;
-            height: 128px;
-        }
-    </style>
+    <link rel="stylesheet" href="./assets/style.css">
 </head>
 <body>
-    <header>
+    <header> <!-- navigation header -->
         <img src="https://avatars.githubusercontent.com/u/145495454?s=280&v=4"></img>
         <div><a href="#home" onclick="sethome()">Home</a></div>
         <div><a href="#about" onclick="setabout()">About</a></div>
@@ -79,20 +15,20 @@
         <div><a href="#contact" onclick="setcontact()">Contact</a></div>
     </header>
 
-    <section id="home" class="active">
+    <section id="home" class="active"> <!-- home page -->
         <h1>/dev/ co-op</h1>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quo, iste?</p>
         <p>Use the navbar to navigate around the website.</p>
     </section>
 
-    <section id="about" class="inactive">
+    <section id="about" class="inactive"> <!-- about page -->
         <h1>About</h1>
         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius, illo!</p>
         <p>Cum veniam, tenetur repellat reprehenderit numquam id repudiandae officiis unde.</p>
         <p>Ipsa, facere odit? Illum, consequuntur neque reprehenderit fuga repellat dicta.</p>
     </section>
 
-    <section id="members" class="inactive">
+    <section id="members" class="inactive"> <!-- members page -->
         <h1>Members</h1>
         <div class="members">
             <div class="member">
@@ -108,31 +44,10 @@
         </div>
     </section>
 
-    <section id="contact" class="inactive">
+    <section id="contact" class="inactive"> <!-- contact page -->
         <h1>Contact</h1>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, dolorum <a href="mailto:someone@example.com"><code>someone@example.com</code></a>!</p>
     </section>
-
-    <script>
-        const sethome = () => {
-            document.querySelector(".active").className = "inactive"
-            document.querySelector("#home").className = "active"
-        }
-
-        const setabout = () => {
-            document.querySelector(".active").className = "inactive"
-            document.querySelector("#about").className = "active"
-        }
-
-        const setmembers = () => {
-            document.querySelector(".active").className = "inactive"
-            document.querySelector("#members").className = "active"
-        }
-
-        const setcontact = () => {
-            document.querySelector(".active").className = "inactive"
-            document.querySelector("#contact").className = "active"
-        }
-    </script>
+    <script type="text/javascript" src="./assets/script.js"></script>
 </body>
 </html>
