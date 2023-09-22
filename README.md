@@ -1,2 +1,2 @@
 # website
-/dev/ co-op's website
+This is the website for /dev/ co-op.<br>Still work-in-progress.
